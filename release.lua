@@ -2,6 +2,11 @@ local md5 = require('md5')
 local lfs = require('lfs')
 local JSON = require('JSON')
 
+local URL = ""
+if arg[1] == '--url' then
+	URL = arg[2]
+end
+
 function matchfiles(path, pattern, files)
 	files = files or {}
     for file in lfs.dir(path) do
@@ -48,7 +53,7 @@ for i,v in ipairs(all) do
 		name = base,
 		size = lfs.attributes(v, 'size'),
 		hash = md5.sumhexa(readfile(v)),
-		url = "https://raw.github.com/xpol/woohaup/master/"..base
+		url = URL..base
 	}
 	files[#files+1] = f
 end
