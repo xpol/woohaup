@@ -1,0 +1,15 @@
+{
+	"require_core":"1.0.2",
+	"files":[
+		{
+			"name":"script.luac",
+			"desc":"Script files.",
+			"v":"1.0.2",
+			"size":12800,
+			"hash":"md5:balbalblab",
+			"url":[
+				"urls"
+			]
+		}
+	]
+}
