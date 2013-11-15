@@ -54,7 +54,7 @@ for i,v in ipairs(all) do
 end
 
 
-local version = JSON:decode(readfile('version.json'))
+local version = JSON:decode(readfile('v'))
 version.files = files
 local encoded = JSON:encode_pretty(version)
-writefile('version.json', encoded)
+writefile('v', encoded)
