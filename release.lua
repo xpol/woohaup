@@ -24,14 +24,14 @@ function matchfiles(path, pattern, files)
 end
 
 local function readfile(filename)
-	local f = io.open(filename, 'rb')
+	local f = io.open(filename, 'rt')
 	local t = f:read('*a')
 	f:close()
 	return t
 end
 
 local function writefile(filename, txt)
-	local f = io.open(filename, 'wb')
+	local f = io.open(filename, 'wt')
 	local t = f:write(txt)
 	f:close()
 end

@@ -1,14 +1,14 @@
 {
-     "core": "1.0.2",
+     "core": "1.0.0",
     "files": [ {
-                 "hash": "0ffffbb2f5b3d4dbd341411877b8439b",
-                 "name": "a.mpq",
+                 "hash": "e26f6affdf288cadfe9ca9a1dedc353b",
+                 "name": "assets.mpq",
                  "size": 130744,
-                  "url": "a.mpq"
+                  "url": "assets.mpq"
              }, {
-                 "hash": "5052b85aa640350c7847dc7aadeb3258",
-                 "name": "b.mpq",
-                 "size": 11922,
-                  "url": "b.mpq"
+                 "hash": "781bd51373e3951edcf78e85ed7e2573",
+                 "name": "scripts.mpq",
+                 "size": 29637824,
+                  "url": "scripts.mpq"
              } ]
 }
