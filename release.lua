@@ -53,13 +53,27 @@ for i,v in ipairs(all) do
 		name = base,
 		size = lfs.attributes(v, 'size'),
 		hash = md5.sumhexa(readfile(v)),
-		url = URL..base
 	}
+	if #URL > 0 then
+		f.url = URL..base
+	end
+
 	files[#files+1] = f
 end
 
 
 local version = JSON:decode(readfile('v'))
 version.files = files
+local v = ''
+repeat
+	if #v > 0 then
+		print(string.format('Bad version format: %s, retry.', v))
+	end
+	io.write(string.format('Current version is %s, input a new version ([Enter] to skip):', version.version))
+	v = io.read('*l')
+until #v == 0 or (v:match('^%d+.%d+.%d+$'))
+
+if #v > 0 then version.version = v end
+
 local encoded = JSON:encode_pretty(version)
 writefile('v', encoded)
