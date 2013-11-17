@@ -45,9 +45,8 @@ local all = matchfiles('.', '.*%.mpq')
 
 local files = {}
 
-
+print('Files to release:')
 for i,v in ipairs(all) do
-	print(v)
 	local base = basename(v)
 	local f = {
 		name = base,
@@ -57,10 +56,12 @@ for i,v in ipairs(all) do
 	if #URL > 0 then
 		f.url = URL..base
 	end
+	print(f.name, f.size, f.hash)
 
 	files[#files+1] = f
 end
 
+print('')
 
 local version = JSON:decode(readfile('v'))
 version.files = files
