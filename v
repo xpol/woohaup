@@ -1,8 +1,8 @@
 {
       "files": [ {
-                   "hash": "b496d94ef27fff3eabffab52f7ba3c3d",
+                   "hash": "ae5fe86bede7bdddafcac2e2ee3e9b32",
                    "name": "script.mpq",
-                   "size": 3997848
+                   "size": 3988647
                } ],
-    "version": "0.5.1"
+    "version": "0.5.2"
 }
